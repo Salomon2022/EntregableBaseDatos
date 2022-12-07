@@ -1,5 +1,13 @@
 
 
+DELIMITER $
+ CREATE PROCEDURE baja_eliminar (in dni int(4))
+ BEGIN
+ DELETE FROM empleados WHERE DNIempleado=dni;
+ END$
+ 
+ USE buenasalud;
+ call baja_eliminar(72616576)
 
 
 
