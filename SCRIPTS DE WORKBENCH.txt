@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+2. PROCEDIMIENTO QUE INSERTA NUEVO DEPARTAMENTO:
+
+DELIMITER $
+CREATE PROCEDURE InsertarDep (in nom varchar(80), in loc VARCHAR(80))
+BEGIN
+	INSERT INTO departamento (NombreDep, LocalDep) VALUES (nom, loc);
+END $
+
+call InsertarDep('Odontología', 'Pillcomarca')
+
+SELECT * FROM buenasalud.departamento;
